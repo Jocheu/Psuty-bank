@@ -1,0 +1,194 @@
+body {
+    background: linear-gradient(253deg, #0cc898, #1797d2, #864fe1);
+    background-size: 300% 300%;
+    -webkit-animation: backgr 25s ease infinite;
+    -moz-animation: backgr 25s ease infinite;
+    animation: backgr 25s ease infinite;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+@-webkit-keyframes backgr {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes backgr {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes backgr {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+.full-screen {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(https://i.imgur.com/wCG2csZ.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    /* works with row or column */
+
+    flex-direction: column;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+.button-line {
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    text-align: center;
+    font-size: 1.4em;
+    opacity: .8;
+    padding: 20px 40px;
+    text-decoration: none;
+    transition: all .5s ease;
+    margin: 0 auto;
+    display: block;
+    width: 100px;
+}
+
+.button-line:hover {
+    opacity: 1;
+}
+
+#up {
+    width: 100%;
+    background-color: rgba(0, 31, 49, 255);
+    margin: 0px;
+}
+
+#logo {
+    width: 100px;
+}
+
+#napis-logo {
+    background: rgba(0, 31, 49, 255);
+    padding-right: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+#napis-logo h1 {
+    color: rgba(69, 194, 255, 255);
+
+    animation: glow 4s linear infinite;
+    animation-delay: calc(0.4s * var(--i));
+}
+
+@keyframes glow {
+    50% {
+        text-shadow: 0 0 10px rgba(84, 247, 251, 255),
+            0 0 20px rgba(84, 247, 251, 255);
+    }
+}
+
+
+#cale-logo {
+    display: flex;
+    flex-direction: row;
+    border: 2px rgb(54, 52, 52);
+    border-style: solid;
+}
+
+#login {
+    background-color: bisque;
+    padding: 25px;
+    border-radius: 10px;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#uwu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#uwu input {
+    margin-top: 20px;
+}
+
+#pierwsze {
+    transition-duration: 0.3s;
+    opacity: 1;
+    display: block;
+}
+
+#drugie {
+    transition-duration: 0.3s;
+    opacity: 0;
+    display: none;
+}
+
+#trzecie {
+    transition-duration: 0.3s;
+    opacity: 0;
+    display: none;
+}
+
+#zaloguj {
+    transition-duration: 0.3s;
+    opacity: 0;
+    display: none;
+    width: 50%;
+}
+
+#goodOrBad1 {
+    color: red;
+}
+
+i {
+    text-decoration: none;
+}

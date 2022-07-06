@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style3.css">
+    <script src="https://kit.fontawesome.com/9f7a83f8ad.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="up">
+        <div id="cale-logo">
+            <img src="logo.gif" alt="" id="logo">
+            <div id="napis-logo">
+                <h1 style="--i:1;">I</h1>
+                <h1 style="--i:2;">n</h1>
+                <h1 style="--i:3;">f</h1>
+                <h1 style="--i:4;">i</h1>
+                <h1 style="--i:5;">n</h1>
+                <h1 style="--i:6;">i </h1>
+                <h1 style="--i:7;">B</h1>
+                <h1 style="--i:8;">a</h1>
+                <h1 style="--i:9;">n</h1>
+                <h1 style="--i:10;">k</h1>
+            </div>
+        </div>
+    </div>
+    <div class="full-screen">
+        <div id="login">
+            <div id="uwu">
+                <div id="pierwsze">Twój identyfikator
+                    <div class="pytanie">
+                        <a id="goodOrBad1"></a>
+                        <input id="numeroUno" type="text" onkeyup="kod1()">
+                        <button disabled id="kol1" onclick="kolejne()">
+                            <i class="fa-solid fa-angle-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div id="drugie">Kod bankowy
+                    <div class="pytanie">
+                        <a id="goodOrBad2"></a>
+                        <input id="numeroDos" type="text" onkeyup="kod2()">
+                        <button disabled id="kol2" onclick="kolejne()">
+                            <i class="fa-solid fa-angle-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div id="trzecie">Jakiś kod trzeci
+                    <div class="pytanie">
+                        <a id="goodOrBad3"></a>
+                        <input id="numeroTres" type="text" onkeyup="kod3()">
+                        <button disabled id="kol3" onclick="kolejne()">
+                            <i class="fa-solid fa-angle-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <input id="zaloguj" type="submit" value="Zaloguj się" onclick="nextPage()">
+        </div>
+
+    </div>
+</body>
+
+</html>
+
+<script>
+    var kol = 0;
+    function kolejne() {
+        if (kol == 0) {
+            var obj = document.getElementById("pierwsze");
+            var obj2 = document.getElementById("drugie");
+            obj.style.opacity = 0;
+            obj2.style.opacity = 1;
+            window.setTimeout(
+                function removethis() {
+                    obj.style.display = 'none';
+                    obj2.style.display = 'block';
+                }, 300);
+            kol++;
+        }
+        else if (kol == 1) {
+            var obj = document.getElementById("drugie");
+            var obj2 = document.getElementById("trzecie");
+            obj.style.opacity = 0;
+            obj2.style.opacity = 1;
+            window.setTimeout(
+                function removethis() {
+                    obj.style.display = 'none';
+                    obj2.style.display = 'block';
+                }, 300);
+            kol++;
+        }
+        else if (kol == 2) {
+            var obj = document.getElementById("trzecie");
+            var obj2 = document.getElementById("zaloguj");
+            obj.style.opacity = 0;
+            obj2.style.opacity = 1;
+            window.setTimeout(
+                function removethis() {
+                    obj.style.display = 'none';
+                    obj2.style.display = 'block';
+                }, 300);
+        }
+
+
+    }
+    let spr1 = new RegExp('[A-Z]{1,}');
+    let spr2 = new RegExp('[0-9]{1,}');
+    let spr3 = new RegExp('[$,#,!,@,%,^,&,*,(,),+,-]{1,}');
+
+    function kod1() {
+        var str = document.getElementById("numeroUno").value;
+        if (str.length == 10) {
+        }
+        else {
+            document.getElementById("goodOrBad1").style.color = 'red';
+            document.getElementById("goodOrBad1").innerHTML = '<i class="fa-solid fa-xmark"></i>';
+            document.getElementById("kol1").disabled = true;
+            return;
+        }
+        if (spr1.test(str)) {
+        }
+        else {
+            document.getElementById("goodOrBad1").style.color = 'red';
+            document.getElementById("goodOrBad1").innerHTML = '<i class="fa-solid fa-xmark"></i>';
+            document.getElementById("kol1").disabled = true;
+            return
+        }
+        if (spr2.test(str)) {
+        }
+        else {
+            document.getElementById("goodOrBad1").style.color = 'red';
+            document.getElementById("goodOrBad1").innerHTML = '<i class="fa-solid fa-xmark"></i>';
+            document.getElementById("kol1").disabled = true;
+            return;
+        }
+        if (spr3.test(str)) {
+            document.getElementById("goodOrBad1").style.color = 'green';
+            document.getElementById("goodOrBad1").innerHTML = '<i class="fa-solid fa-check"></i>'
+            document.getElementById("kol1").disabled = false;
+        }
+        else {
+            document.getElementById("goodOrBad1").style.color = 'red';
+            document.getElementById("goodOrBad1").innerHTML = '<i class="fa-solid fa-xmark"></i>';
+            document.getElementById("kol1").disabled = true;
+            return;
+        }
+    }
+
+    let spr4 = new RegExp('^[0-9]{8}$');
+    function kod2() {
+        var str = document.getElementById("numeroDos").value;
+        if (spr4.test(str)) {
+            document.getElementById("goodOrBad2").style.color = 'green';
+            document.getElementById("goodOrBad2").innerHTML = '<i class="fa-solid fa-check"></i>'
+            document.getElementById("kol2").disabled = false;
+        }
+        else {
+            document.getElementById("goodOrBad2").style.color = 'red';
+            document.getElementById("goodOrBad2").innerHTML = '<i class="fa-solid fa-xmark"></i>';
+            document.getElementById("kol2").disabled = true;
+            return;
+        }
+    }
+    let spr5 = new RegExp('[3-8]{2}');
+    let spr6 = new RegExp('[K-R]{2}');
+    function kod3() {
+        var str = document.getElementById("numeroTres").value;
+        if (str.length == 4) {
+            1
+        }
+        else {
+            document.getElementById("goodOrBad3").style.color = 'red';
+            document.getElementById("goodOrBad3").innerHTML = '<i class="fa-solid fa-xmark"></i>';
+            document.getElementById("kol3").disabled = true;
+            return;
+        }
+        if (spr5.test(str)) {
+        }
+        else {
+            document.getElementById("goodOrBad3").style.color = 'red';
+            document.getElementById("goodOrBad3").innerHTML = '<i class="fa-solid fa-xmark"></i>';
+            document.getElementById("kol3").disabled = true;
+            return;
+        }
+        if (spr6.test(str)) {
+            document.getElementById("goodOrBad3").style.color = 'green';
+            document.getElementById("goodOrBad3").innerHTML = '<i class="fa-solid fa-check"></i>'
+            document.getElementById("kol3").disabled = false;
+        }
+        else {
+            document.getElementById("goodOrBad3").style.color = 'red';
+            document.getElementById("goodOrBad3").innerHTML = '<i class="fa-solid fa-xmark"></i>';
+            document.getElementById("kol3").disabled = true;
+            return;
+        }
+    }
+    function nextPage() {
+        location.href = "index2.php";
+    }
+</script>

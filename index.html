@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infini-bank</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9f7a83f8ad.js" crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+    <div id="naglowek">
+        <div id="cale-logo">
+            <img src="logo.gif" alt="" id="logo">
+            <div id="napis-logo">
+                <h1 style="--i:1;">I</h1>
+                <h1 style="--i:2;">n</h1>
+                <h1 style="--i:3;">f</h1>
+                <h1 style="--i:4;">i</h1>
+                <h1 style="--i:5;">n</h1>
+                <h1 style="--i:6;">i </h1>
+                <h1 style="--i:7;">B</h1>
+                <h1 style="--i:8;">a</h1>
+                <h1 style="--i:9;">n</h1>
+                <h1 style="--i:10;">k</h1>
+            </div>
+        </div>
+        <div id="menu">
+            <ul>
+                <li>Więcej <p id="trojkacik">▴</p>
+                    <ul>
+                        <a href="error.html">
+                            <li>Bankowość elektroniczna</li>
+                        </a>
+                        <a href="error.html">
+                            <li>Płatności mobline</li>
+                        </a>
+                    </ul>
+                </li>
+                <a href="error.html">
+                </a>
+                <a href="error.html">
+                    <li class="menu-zazn">Weź kredyt</li>
+                </a>
+                <a href="error.html">
+                    <li class="menu-zazn">Otwórz konto</li>
+                </a>
+                <a href="login.html">
+                    <li id="logowanie">
+                        <i class="fa-solid fa-lock"></i>
+                    </li>
+                </a>
+            </ul>
+        </div>
+    </div>
+    <div id="container">
+        <div id="left">
+
+            <p id="ad"><a href="money.php"><img src="reklama1.png" alt="a" id="reklama"></a></p>
+
+        </div>
+        <div id="right">
+            <div class="panel">
+                <h1>Akutalności</h1>
+                <div class="info" onclick="send()">
+                    <div class="inf-logo">
+                        <i class="fa-solid fa-newspaper fa-6x"></i>
+                    </div>
+                    <div class="inf-tekst">
+                        <h4>Najnowsze informacje</h4> <br>
+                        ważne informacje dla klientów
+                    </div>
+                    <div class="odnosnik">
+                        <i class="fa-solid fa-angle-right fa-6x"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="panel">
+                <h1>Konta</h1>
+                <div class="info" onclick="send()">
+                    <div class="inf-logo">
+                        <i class="fa-solid fa-user-large fa-6x"></i>
+                    </div>
+                    <div class="inf-tekst">
+                        <h4>Konto dla Ciebie</h4> <br>
+                        Nieskończone możliwości
+                    </div>
+                    <div class="odnosnik">
+                        <i class="fa-solid fa-angle-right fa-6x"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="panel">
+                <h1>Kredyty</h1>
+                <div class="info" onclick="send()">
+                    <div class="inf-logo">
+                        <i class="fa-solid fa-wallet fa-6x"></i>
+                    </div>
+                    <div class="inf-tekst">
+                        <h4>Kredyt na każdą okazję</h4> <br>
+                        Wręcz nieskończony <br> wybór pożyczek
+                    </div>
+                    <div class="odnosnik">
+                        <i class="fa-solid fa-angle-right fa-6x"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="stopka">
+        <div class="footPanel"><i class="fa-solid fa-infinity fa-4x"></i>
+            <h3>InfiniBank</h3>
+        </div>
+        <div class="footPanel"><i class="fa-solid fa-phone fa-4x"></i>
+            <h3>Kontakt</h3>
+            <a href="">Infolinia</a> <br>
+            <a href="">placówki i bankomaty</a> <br>
+            <a href="">Formularz kontaktu</a> <br>
+            <a href="">Newsletter</a>
+        </div>
+        <div class="footPanel"><i class="fa-solid fa-info fa-4x"></i>
+            <h3>O banku</h3>
+            <a href="">Kariera</a> <br>
+            <a href="">Sieć partnerska</a> <br>
+            <a href="">Biuro prasowe</a> <br>
+            <a href="">Bezpieczeństwo</a> <br>
+            <a href="">Klub rabatowy</a>
+        </div>
+        <div class="footPanel"><i class="fa-solid fa-question fa-4x"></i>
+            <h3>Przydatne informacje</h3>
+            <a href="">Jak zastrzec kartę?</a> <br>
+            <a href="">Oprocentowanie</a> <br>
+            <a href="">Opłaty i prowizje</a> <br>
+            <a href="">Notowania Funduszy</a> <br>
+            <a href="">Dokumenty</a> <br>
+        </div>
+    </div>
+    <div id="brawaDlaAutora">
+        Joachim Psuty-Lipski
+    </div>
+</body>
+
+</html>
+
+<script>
+    var imgindex = 0;
+    var obrazek = document.getElementById("ad");
+    var obrazekStyl = document.getElementById("reklama");
+    function changeImg() {
+        if (imgindex == 0) {
+
+            obrazek.innerHTML = '<a href="error.html"><img src="reklama2.jpg" alt="b" id="reklama"></a>';
+
+            imgindex++;
+        }
+        else if (imgindex == 1) {
+
+            obrazek.innerHTML = '<a href="https://www.siepomaga.pl/ukraina"><img src="reklama3.jpg" alt="c" id="reklama"></a>';
+
+            imgindex++;
+        }
+        else if (imgindex == 2) {
+
+            obrazek.innerHTML = '<a href="money.php"><img src="reklama1.png" alt="a" id="reklama"></a>';
+
+            imgindex = 0;
+        }
+
+    }
+    window.onload = function () {
+        setInterval(changeImg, 10000);
+    }
+    function send() {
+        location.href = "error.html"
+    }
+
+</script>

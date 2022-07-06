@@ -1,0 +1,150 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(90deg, #1CB5E0, rgba(0, 31, 49, 255));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 100vh solid transparent;
+    border-left: 100vh solid #fff;
+    opacity: 0.1;
+}
+
+section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-top: 100vh solid transparent;
+    border-right: 100vh solid #fff;
+    opacity: 0.1;
+}
+
+#content {
+    background-color: #fff;
+    height: 100%;
+    width: 60%;
+    opacity: 0.75;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+#pasek {
+    background: rgba(0, 31, 49, 255);
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-left: 5%;
+}
+
+#napis-logo{
+    display: flex;
+    flex-direction: row;
+}
+
+#napis-logo h1 {
+    margin-top: 10px;
+    color: rgba(69, 194, 255, 255);
+    
+    animation: glow 4s linear infinite;
+    animation-delay: calc(0.4s * var(--i));
+}
+
+@keyframes glow {
+    50% {
+        text-shadow: 0 0 10px rgba(84, 247, 251, 255),
+            0 0 20px rgba(84, 247, 251, 255);
+    }
+}
+
+#wazneRzeczy {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+#logo {
+    height: 50px;
+}
+
+#operacje {
+    display: flex;
+    flex-direction: column;
+}
+
+#przelew {
+    width: 50%;
+    border: 1px solid black;
+}
+
+.inf a{
+    margin-top: 25px;
+}
+
+#zegar{
+    background-color: gainsboro;
+    color: #1CB5E0;
+    font-family: "Segoe UI", sans-serif;
+    padding: 15px 10px;
+    border: 3px solid #2E94E3;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+#zegar:hover{
+    background: #1CB5E0;
+    color: white;
+    box-shadow: 0 0 30px #2E94E3;
+}
+
+#date{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+#czas{
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#czas span:not(:last-child){
+    position: relative;
+    margin: 0 4px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+#czas span:last-child{
+    background: #2E94E3;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px;
+    padding: 0 5px;
+    border-radius: 3px;
+}
